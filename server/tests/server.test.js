@@ -244,7 +244,7 @@ describe('POST /users', ()=>{
 	});
 
 	it('should not create user if email is in use', (done)=>{
-		let email=users[0].email
+		let email=users[0].email;
 		let password='123bbb';
 
 		request(app)
@@ -253,11 +253,4 @@ describe('POST /users', ()=>{
 			.expect(400)
 			.end(done);
 	});
-
-
-
-
-
-
-
 });
